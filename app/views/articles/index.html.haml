@@ -6,7 +6,6 @@
       %p.extend= truncate(article.body, length: 500, separator: ' ')
       %td= link_to 'Edit', edit_article_path(article)
       %td= link_to 'Destroy', article, method: :delete, data: { :confirm => 'Are you sure?' }
-
 %br
 
 

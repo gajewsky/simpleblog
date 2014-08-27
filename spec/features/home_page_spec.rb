@@ -4,7 +4,7 @@ feature 'Home page' do
 
   scenario 'visit the home page' do
     visit root_path
-    expect(page).to have_content 'Welcome on my blog!'
+    expect(page).to have_content 'Welcome! It is my blog!'
   end
 
 end
