@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
-  resources :articles
+  
+  resources :articles do
+    resources :comments
+  end
+  
+  root to: 'visitors#index'
 
-	root to: 'visitors#index'end
+end
