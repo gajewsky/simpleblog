@@ -1,2 +1,4 @@
-- @tags.each do |tag|
-  = link_to tag.name, tag_path(tag)
+%div.tag_cloud
+  %p{style: "font-size:1.2em;margin:30px 30px;"}
+    - @tags.each do |tag|
+      = link_to tag.name, tag_path(tag)

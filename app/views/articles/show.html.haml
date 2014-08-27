@@ -1,23 +1,18 @@
-%p#notice= notice
+%div.article-show
+  %p#notice= notice
+  = image_tag(@article.picture_url) if @article.picture.present?
+  %h1.title
+    %b= @article.title
+    
+  %p.tags
+    - @article.tags.each do |tag|
+      = link_to tag.name, tag_path(tag)
+  %p.body= @article.body
 
-%p
-  %b Title:
-  = @article.title
-%p
-  Tags:
-  - @article.tags.each do |tag|
-    = link_to tag.name, tag_path(tag)
-%p
-  %b Body:
-  = @article.body
+  = link_to 'Edit', edit_article_path(@article)
+  
+  %h3.comment-title Comments (#{@article.comments.size})
 
-%h3 Comments (#{@article.comments.size})
-
-= render partial: 'articles/comment', collection: @article.comments
-
-
-
-= link_to 'Edit', edit_article_path(@article)
-\|
-= render partial: 'comments/form'
-= link_to 'Back', articles_path
+  = render partial: 'articles/comment', collection: @article.comments
+  = render partial: 'comments/form'
+  = link_to 'Back', articles_path

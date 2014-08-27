@@ -1,9 +1,11 @@
 // import the CSS framework
 @import "bootstrap";
-
+ul{list-style-type: none; }
 img {
   @extend .img-responsive;
   margin: 0 auto;
+  height:500px;
+  width:100%;
   }
 .navbar-brand {
   font-size: inherit;
@@ -30,7 +32,7 @@ main {
   @extend .container;
   background-color: #eee;
   padding-bottom: 80px;
-  width: 100%;
+  width: 60%;
   margin-top: 51px; 
   }
 section {
