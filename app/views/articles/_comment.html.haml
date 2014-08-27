@@ -2,3 +2,5 @@
   %h4
     #{comment.author_name} said:
   %span= comment.body
+  %br
+  %span #{time_ago_in_words(comment.created_at)} ago.
