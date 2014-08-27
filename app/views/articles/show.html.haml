@@ -4,6 +4,10 @@
   %b Title:
   = @article.title
 %p
+  Tags:
+  - @article.tags.each do |tag|
+    = link_to tag.name, tag_path(tag)
+%p
   %b Body:
   = @article.body
 

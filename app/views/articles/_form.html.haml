@@ -4,6 +4,10 @@
   .form-inputs
     = f.input :title
     = f.input :body
+    %p
+    = f.label :tag_list
+    = f.text_field :tag_list
 
   .form-actions
     = f.button :submit
+
